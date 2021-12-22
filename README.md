@@ -1,2 +1,2 @@
 # currency_converter
-Little page for exchange rates calculation
+Little page for currency conversion

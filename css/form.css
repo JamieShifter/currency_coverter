@@ -1,3 +1,8 @@
+.form {
+    background-color: hsla(180, 13%, 14%, 0.904);
+    
+}
+
 .form__labelText {
     display: inline-block;
     width: 100%;
@@ -28,8 +33,8 @@
 }
 
 .form__fieldset {
-    border: 1px solid floralwhite;
-    padding: 20px;
+    border: 1px solid hsla(180, 13%, 14%, 0.904);
+    padding: 10px 20px;
     border-radius: 5px;
 }
 

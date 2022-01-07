@@ -5,7 +5,7 @@
     let fromAmount = document.querySelector(".js-fromAmount");
     let toAmount = document.querySelector(".js-resultAmount");
 
-    function reverse() {
+    const reverse = () => {
         let reversedFromCurrency = outputCurrency.value;
         outputCurrency.value = inputCurrency.value;
         inputCurrency.value = reversedFromCurrency;
@@ -14,9 +14,14 @@
 
     const liveFeedback = (inputCurrency, outputCurrency, fromAmount, toAmount, seed) => {
         const formElement = document.querySelector(".js-form");
+        const reverseButton = document.querySelector(".js-reverseButton");
 
         formElement.addEventListener("input", () => {
             calculate(inputCurrency, outputCurrency, fromAmount, toAmount, seed);
+        })
+
+        reverseButton.addEventListener("click", () => {
+            reverse()
         })
     }
 

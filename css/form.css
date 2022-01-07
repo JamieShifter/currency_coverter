@@ -9,6 +9,10 @@
     max-width: 75px;
 }
 
+.form__labelText--reverse {
+    margin: 15px;
+}
+
 .form__labelText--result {
     max-width: 150px;
     font-size: 1.3em;

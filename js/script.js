@@ -1,5 +1,5 @@
 {
-    const pln_seed = { pln: 1, eur: 0.22, usd: 0.24, gbp: 0.18, czk: 5.45, rub: 18, jpy: 27.59, btc: 0.00000515 };
+    const plnSeed = { pln: 1, eur: 0.22, usd: 0.24, gbp: 0.18, czk: 5.45, rub: 18, jpy: 27.59, btc: 0.00000515 };
     let inputCurrency = document.querySelector(".js-fromCurrency");
     let outputCurrency = document.querySelector(".js-toCurrency");
     let fromAmount = document.querySelector(".js-fromAmount");
@@ -9,7 +9,7 @@
         let reversedFromCurrency = outputCurrency.value;
         outputCurrency.value = inputCurrency.value;
         inputCurrency.value = reversedFromCurrency;
-        calculate(inputCurrency, outputCurrency, fromAmount, toAmount, pln_seed);
+        calculate(inputCurrency, outputCurrency, fromAmount, toAmount, plnSeed);
     }
 
     const liveFeedback = (inputCurrency, outputCurrency, fromAmount, toAmount, seed) => {
@@ -27,7 +27,7 @@
 
     const init = () => {
         console.log("Hello fellow developers!")
-        liveFeedback(inputCurrency, outputCurrency, fromAmount, toAmount, pln_seed);
+        liveFeedback(inputCurrency, outputCurrency, fromAmount, toAmount, plnSeed);
     }
 
     init()

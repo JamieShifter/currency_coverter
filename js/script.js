@@ -3,7 +3,7 @@
     let inputCurrency = document.querySelector(".js-fromCurrency");
     let outputCurrency = document.querySelector(".js-toCurrency");
     let fromAmount = document.querySelector(".js-fromAmount");
-    let toAmount = document.querySelector(".js-toAmount");
+    let toAmount = document.querySelector(".js-resultAmount");
 
     function reverse() {
         let reversedFromCurrency = outputCurrency.value;
@@ -21,7 +21,8 @@
     }
 
     const calculate = (inputCurrency, outputCurrency, fromAmount, toAmount, seed) => {
-        toAmount.value = (outputCurrency.value === "btc") ? (fromAmount.value * (seed[outputCurrency.value] / seed[inputCurrency.value])) : (fromAmount.value * (seed[outputCurrency.value] / seed[inputCurrency.value])).toFixed(2);
+        resultAmount = (outputCurrency.value === "btc") ? (fromAmount.value * (seed[outputCurrency.value] / seed[inputCurrency.value])) : (fromAmount.value * (seed[outputCurrency.value] / seed[inputCurrency.value])).toFixed(2);
+        toAmount.innerText = resultAmount + " " + outputCurrency.value.toUpperCase();
     }
 
     const init = () => {
